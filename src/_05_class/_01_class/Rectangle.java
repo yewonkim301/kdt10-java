@@ -3,6 +3,7 @@ package _05_class._01_class;
 import java.util.Scanner;
 
 public class Rectangle {
+    /*
     public int width;
     public int height;
 
@@ -22,5 +23,32 @@ public class Rectangle {
         Rectangle area = new Rectangle();
 
         System.out.println(area.getArea(width, height));
+    }
+    */
+
+    // 클래스 실습
+    // 필드 (변수)
+    private int width;
+    private int height;
+    public static int cnt = 0;
+
+    public Rectangle (int width) {
+        // 지역 변수와 필드 변수명이 동일하기 떄문에 this 를 사용해서 필드 값에 접근
+        this.width = width;
+        // cnt++; // 새로운 Rectangle 인스터스 호출될 때마다 증가
+    }
+
+    public int getWidth() {
+        return width;
+    }
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+    public void setHeight(int height) {
+        this.height = height;
     }
 }
