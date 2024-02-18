@@ -6,15 +6,22 @@ public class VehicleEx {
     public static void main(String[] args) {
         ArrayList<Vehicle> vehicles = new ArrayList<>();
 
-        Car car = new Car("붕붕이", 130);
-        Airplane airplane = new Airplane("비행기", 300);
+        Car car = new Car("기아", 130);
+        Airplane airplane = new Airplane("대한항공", 300);
 
         vehicles.add(car);
         vehicles.add(airplane);
 
         for (Vehicle vehicle: vehicles) {
+            System.out.printf("%s의 최고 속력은 %d\n", vehicle.getName(), vehicle.getMaxSpeed());
             vehicle.move();
-            if (vehicle)
+
+            // flyable 인터페이스를 구현한 경우에만 fly 메소드 호출
+            if (vehicle instanceof Flyable) {
+                ((Flyable) vehicle).fly();
+            }
+
+            System.out.println();
         }
     }
 }
