@@ -20,9 +20,9 @@ class Pair<K, V> {
 
 public class Prac1 {
     public static void main(String[] args) {
-        Pair var1 = new Pair<>("One", 1);
+        Pair<String, Integer> var1 = new Pair<>("One", 1);
         System.out.println("Key: " + var1.getKey() + ", Value: " +  var1.getValue());
-        Pair var2 = new Pair<>(2, "Two");
+        Pair<Integer, String> var2 = new Pair<>(2, "Two");
         System.out.println("Key: " + var2.getKey() + ", Value: " +  var2.getValue());
     }
 }
